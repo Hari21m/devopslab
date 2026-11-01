@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return f"Greetings from container {socket.gethostname()}, version {os.getenv('APP_VERSION', 'dev')}\n"
+    return f"Welcome to container {socket.gethostname()}, version {os.getenv('APP_VERSION', 'dev')}\n"
 
 @app.route("/health")
 def health():
